@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArhiveDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ArhiveDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArhiveDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EasterEgg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +136,17 @@
     <None Include="ArhiveDataSet.xss">
       <DependentUpon>ArhiveDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ArhiveDataSet1.xsc">
+      <DependentUpon>ArhiveDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ArhiveDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ArhiveDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ArhiveDataSet1.xss">
+      <DependentUpon>ArhiveDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,6 +173,9 @@
     <None Include="Resources\power_reset_1847.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Arhive.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="cave_man_emoticon_emoji_sticker_inventor_icon_123518.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
