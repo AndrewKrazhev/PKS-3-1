@@ -167,7 +167,7 @@
             this.delaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.delaBindingNavigator.Name = "delaBindingNavigator";
             this.delaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.delaBindingNavigator.Size = new System.Drawing.Size(800, 25);
+            this.delaBindingNavigator.Size = new System.Drawing.Size(994, 25);
             this.delaBindingNavigator.TabIndex = 0;
             this.delaBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -271,7 +271,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(209, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(591, 462);
+            this.groupBox1.Size = new System.Drawing.Size(785, 495);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Дела";
@@ -293,7 +293,7 @@
             this.delaDataGridView.Location = new System.Drawing.Point(3, 16);
             this.delaDataGridView.Name = "delaDataGridView";
             this.delaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.delaDataGridView.Size = new System.Drawing.Size(585, 443);
+            this.delaDataGridView.Size = new System.Drawing.Size(779, 476);
             this.delaDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -360,7 +360,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox2.Location = new System.Drawing.Point(0, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(209, 462);
+            this.groupBox2.Size = new System.Drawing.Size(209, 495);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Редактиование";
@@ -403,7 +403,7 @@
             this.comboBox1.DataSource = this.opisBindingSource;
             this.comboBox1.DisplayMember = "OpisName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(57, 144);
+            this.comboBox1.Location = new System.Drawing.Point(78, 123);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 2;
@@ -420,7 +420,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(85, 261);
+            this.button1.Location = new System.Drawing.Point(128, 460);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -432,7 +432,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 487);
+            this.ClientSize = new System.Drawing.Size(994, 520);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.delaBindingNavigator);
