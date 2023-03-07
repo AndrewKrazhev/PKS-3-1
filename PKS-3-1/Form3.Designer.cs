@@ -29,30 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             System.Windows.Forms.Label deloNameLabel;
             System.Windows.Forms.Label deloDescLabel;
             System.Windows.Forms.Label deloBeginLabel;
             System.Windows.Forms.Label deloEndLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.arhiveDataSet = new PKS_3_1.ArhiveDataSet();
             this.delaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.delaTableAdapter = new PKS_3_1.ArhiveDataSetTableAdapters.DelaTableAdapter();
             this.tableAdapterManager = new PKS_3_1.ArhiveDataSetTableAdapters.TableAdapterManager();
             this.delaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.delaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.delaDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,10 +60,15 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deloNameTextBox = new System.Windows.Forms.TextBox();
-            this.deloDescTextBox = new System.Windows.Forms.TextBox();
-            this.deloBeginDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.deloEndDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.deloBeginDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.deloDescTextBox = new System.Windows.Forms.TextBox();
+            this.deloNameTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.opisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.opisTableAdapter = new PKS_3_1.ArhiveDataSetTableAdapters.OpisTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             deloNameLabel = new System.Windows.Forms.Label();
             deloDescLabel = new System.Windows.Forms.Label();
             deloBeginLabel = new System.Windows.Forms.Label();
@@ -74,9 +78,46 @@
             ((System.ComponentModel.ISupportInitialize)(this.delaBindingNavigator)).BeginInit();
             this.delaBindingNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delaDataGridView)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.opisBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // deloNameLabel
+            // 
+            deloNameLabel.AutoSize = true;
+            deloNameLabel.Location = new System.Drawing.Point(9, 22);
+            deloNameLabel.Name = "deloNameLabel";
+            deloNameLabel.Size = new System.Drawing.Size(63, 13);
+            deloNameLabel.TabIndex = 0;
+            deloNameLabel.Text = "Delo Name:";
+            // 
+            // deloDescLabel
+            // 
+            deloDescLabel.AutoSize = true;
+            deloDescLabel.Location = new System.Drawing.Point(12, 48);
+            deloDescLabel.Name = "deloDescLabel";
+            deloDescLabel.Size = new System.Drawing.Size(60, 13);
+            deloDescLabel.TabIndex = 2;
+            deloDescLabel.Text = "Delo Desc:";
+            // 
+            // deloBeginLabel
+            // 
+            deloBeginLabel.AutoSize = true;
+            deloBeginLabel.Location = new System.Drawing.Point(10, 75);
+            deloBeginLabel.Name = "deloBeginLabel";
+            deloBeginLabel.Size = new System.Drawing.Size(62, 13);
+            deloBeginLabel.TabIndex = 4;
+            deloBeginLabel.Text = "Delo Begin:";
+            // 
+            // deloEndLabel
+            // 
+            deloEndLabel.AutoSize = true;
+            deloEndLabel.Location = new System.Drawing.Point(18, 101);
+            deloEndLabel.Name = "deloEndLabel";
+            deloEndLabel.Size = new System.Drawing.Size(54, 13);
+            deloEndLabel.TabIndex = 6;
+            deloEndLabel.Text = "Delo End:";
             // 
             // arhiveDataSet
             // 
@@ -130,6 +171,31 @@
             this.delaBindingNavigator.TabIndex = 0;
             this.delaBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -162,17 +228,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -180,7 +239,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -189,38 +248,20 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // delaBindingNavigatorSaveItem
             // 
             this.delaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.delaBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("delaBindingNavigatorSaveItem.Image")));
             this.delaBindingNavigatorSaveItem.Name = "delaBindingNavigatorSaveItem";
-            this.delaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.delaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.delaBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.delaBindingNavigatorSaveItem.Click += new System.EventHandler(this.delaBindingNavigatorSaveItem_Click);
             // 
@@ -234,24 +275,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Дела";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(deloEndLabel);
-            this.groupBox2.Controls.Add(this.deloEndDateTimePicker);
-            this.groupBox2.Controls.Add(deloBeginLabel);
-            this.groupBox2.Controls.Add(this.deloBeginDateTimePicker);
-            this.groupBox2.Controls.Add(deloDescLabel);
-            this.groupBox2.Controls.Add(this.deloDescTextBox);
-            this.groupBox2.Controls.Add(deloNameLabel);
-            this.groupBox2.Controls.Add(this.deloNameTextBox);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Location = new System.Drawing.Point(0, 25);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(209, 462);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Редактиование";
             // 
             // delaDataGridView
             // 
@@ -269,7 +292,6 @@
             this.delaDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.delaDataGridView.Location = new System.Drawing.Point(3, 16);
             this.delaDataGridView.Name = "delaDataGridView";
-            this.delaDataGridView.ReadOnly = true;
             this.delaDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.delaDataGridView.Size = new System.Drawing.Size(585, 443);
             this.delaDataGridView.TabIndex = 1;
@@ -323,48 +345,33 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // deloNameLabel
+            // groupBox2
             // 
-            deloNameLabel.AutoSize = true;
-            deloNameLabel.Location = new System.Drawing.Point(9, 22);
-            deloNameLabel.Name = "deloNameLabel";
-            deloNameLabel.Size = new System.Drawing.Size(63, 13);
-            deloNameLabel.TabIndex = 0;
-            deloNameLabel.Text = "Delo Name:";
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(deloEndLabel);
+            this.groupBox2.Controls.Add(this.deloEndDateTimePicker);
+            this.groupBox2.Controls.Add(deloBeginLabel);
+            this.groupBox2.Controls.Add(this.deloBeginDateTimePicker);
+            this.groupBox2.Controls.Add(deloDescLabel);
+            this.groupBox2.Controls.Add(this.deloDescTextBox);
+            this.groupBox2.Controls.Add(deloNameLabel);
+            this.groupBox2.Controls.Add(this.deloNameTextBox);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox2.Location = new System.Drawing.Point(0, 25);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(209, 462);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Редактиование";
             // 
-            // deloNameTextBox
+            // deloEndDateTimePicker
             // 
-            this.deloNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.delaBindingSource, "DeloName", true));
-            this.deloNameTextBox.Location = new System.Drawing.Point(78, 19);
-            this.deloNameTextBox.Name = "deloNameTextBox";
-            this.deloNameTextBox.Size = new System.Drawing.Size(121, 20);
-            this.deloNameTextBox.TabIndex = 1;
-            // 
-            // deloDescLabel
-            // 
-            deloDescLabel.AutoSize = true;
-            deloDescLabel.Location = new System.Drawing.Point(12, 48);
-            deloDescLabel.Name = "deloDescLabel";
-            deloDescLabel.Size = new System.Drawing.Size(60, 13);
-            deloDescLabel.TabIndex = 2;
-            deloDescLabel.Text = "Delo Desc:";
-            // 
-            // deloDescTextBox
-            // 
-            this.deloDescTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.delaBindingSource, "DeloDesc", true));
-            this.deloDescTextBox.Location = new System.Drawing.Point(78, 45);
-            this.deloDescTextBox.Name = "deloDescTextBox";
-            this.deloDescTextBox.Size = new System.Drawing.Size(121, 20);
-            this.deloDescTextBox.TabIndex = 3;
-            // 
-            // deloBeginLabel
-            // 
-            deloBeginLabel.AutoSize = true;
-            deloBeginLabel.Location = new System.Drawing.Point(10, 75);
-            deloBeginLabel.Name = "deloBeginLabel";
-            deloBeginLabel.Size = new System.Drawing.Size(62, 13);
-            deloBeginLabel.TabIndex = 4;
-            deloBeginLabel.Text = "Delo Begin:";
+            this.deloEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.delaBindingSource, "DeloEnd", true));
+            this.deloEndDateTimePicker.Location = new System.Drawing.Point(78, 97);
+            this.deloEndDateTimePicker.Name = "deloEndDateTimePicker";
+            this.deloEndDateTimePicker.Size = new System.Drawing.Size(121, 20);
+            this.deloEndDateTimePicker.TabIndex = 7;
             // 
             // deloBeginDateTimePicker
             // 
@@ -374,22 +381,52 @@
             this.deloBeginDateTimePicker.Size = new System.Drawing.Size(121, 20);
             this.deloBeginDateTimePicker.TabIndex = 5;
             // 
-            // deloEndLabel
+            // deloDescTextBox
             // 
-            deloEndLabel.AutoSize = true;
-            deloEndLabel.Location = new System.Drawing.Point(18, 101);
-            deloEndLabel.Name = "deloEndLabel";
-            deloEndLabel.Size = new System.Drawing.Size(54, 13);
-            deloEndLabel.TabIndex = 6;
-            deloEndLabel.Text = "Delo End:";
+            this.deloDescTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.delaBindingSource, "DeloDesc", true));
+            this.deloDescTextBox.Location = new System.Drawing.Point(78, 45);
+            this.deloDescTextBox.Name = "deloDescTextBox";
+            this.deloDescTextBox.Size = new System.Drawing.Size(121, 20);
+            this.deloDescTextBox.TabIndex = 3;
             // 
-            // deloEndDateTimePicker
+            // deloNameTextBox
             // 
-            this.deloEndDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.delaBindingSource, "DeloEnd", true));
-            this.deloEndDateTimePicker.Location = new System.Drawing.Point(78, 97);
-            this.deloEndDateTimePicker.Name = "deloEndDateTimePicker";
-            this.deloEndDateTimePicker.Size = new System.Drawing.Size(121, 20);
-            this.deloEndDateTimePicker.TabIndex = 7;
+            this.deloNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.delaBindingSource, "DeloName", true));
+            this.deloNameTextBox.Location = new System.Drawing.Point(78, 19);
+            this.deloNameTextBox.Name = "deloNameTextBox";
+            this.deloNameTextBox.Size = new System.Drawing.Size(121, 20);
+            this.deloNameTextBox.TabIndex = 1;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.delaBindingSource, "OpisNumber", true));
+            this.comboBox1.DataSource = this.opisBindingSource;
+            this.comboBox1.DisplayMember = "OpisName";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(57, 144);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.ValueMember = "id";
+            // 
+            // opisBindingSource
+            // 
+            this.opisBindingSource.DataMember = "Opis";
+            this.opisBindingSource.DataSource = this.arhiveDataSet;
+            // 
+            // opisTableAdapter
+            // 
+            this.opisTableAdapter.ClearBeforeFill = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(85, 261);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form3
             // 
@@ -408,9 +445,10 @@
             this.delaBindingNavigator.ResumeLayout(false);
             this.delaBindingNavigator.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.delaDataGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.delaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.opisBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -449,5 +487,9 @@
         private System.Windows.Forms.DateTimePicker deloBeginDateTimePicker;
         private System.Windows.Forms.TextBox deloDescTextBox;
         private System.Windows.Forms.TextBox deloNameTextBox;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.BindingSource opisBindingSource;
+        private ArhiveDataSetTableAdapters.OpisTableAdapter opisTableAdapter;
+        private System.Windows.Forms.Button button1;
     }
 }

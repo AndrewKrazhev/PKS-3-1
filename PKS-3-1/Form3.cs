@@ -27,9 +27,16 @@ namespace PKS_3_1
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "arhiveDataSet.Opis". При необходимости она может быть перемещена или удалена.
+            this.opisTableAdapter.Fill(this.arhiveDataSet.Opis);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "arhiveDataSet.Dela". При необходимости она может быть перемещена или удалена.
             this.delaTableAdapter.Fill(this.arhiveDataSet.Dela);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            arhiveDataSet.AcceptChanges();
         }
     }
 }
