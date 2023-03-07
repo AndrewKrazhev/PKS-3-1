@@ -35,5 +35,18 @@ namespace PKS_3_1
             _addRecord.MdiParent= this;
             _addRecord.Show();
         }
+
+        private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm _settingsForm=new SettingsForm();
+            _settingsForm.ShowDialog();
+        }
+
+        private void делаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 frm3= new Form3();
+            frm3.MdiParent= this;   
+            frm3.Show();
+        }
     }
 }
